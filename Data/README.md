@@ -7,7 +7,7 @@ This dataset provides samples of SMS messages, classified into spam or ham.
 
 ---
 ## Data Dictionaries
-### Table 1: The data dictionary of the $CO_2$ emission dataset
+### Table 1: The data dictionary of the SMS dataset
 | Column Name      | Description                                                  |
 |------------------|--------------------------------------------------------------|
 | label | whether the SMS message is ham or spam            |
