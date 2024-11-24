@@ -1,76 +1,77 @@
-# Problem_Set_1_Yuxiang
+# Problem_Set_2_Yuxiang
 
 ## System Configuration Report
 
-**CPU Information:**
-- Architecture:                         x86_64
-- CPU op-mode(s):                       32-bit, 64-bit
-- Byte Order:                           Little Endian
-- Address sizes:                        42 bits physical, 48 bits virtual
-- CPU(s):                               76
-- On-line CPU(s) list:                  0-75
-- Thread(s) per core:                   1
-- Core(s) per socket:                   1
-- Socket(s):                            76
-- NUMA node(s):                         1
-- Vendor ID:                            GenuineIntel
-- CPU family:                           6
-- Model:                                85
-- Model name:                           Intel(R) Xeon(R) Gold 6252 CPU @ 2.10GHz
-- Stepping:                             7
-- CPU MHz:                              2099.999
-- BogoMIPS:                             4199.99
-- Hypervisor vendor:                    VMware
-- Virtualization type:                  full
-- L1d cache:                            2.4 MiB
-- L1i cache:                            2.4 MiB
-- L2 cache:                             76 MiB
-- L3 cache:                             2.7 GiB
-- NUMA node0 CPU(s):                    0-75
+### **CPU Information**
+- **Architecture:** x86_64  
+- **CPU op-mode(s):** 32-bit, 64-bit  
+- **Address sizes:** 46 bits physical, 48 bits virtual  
+- **Byte Order:** Little Endian  
+- **CPU(s):** 2  
+- **On-line CPU(s) list:** 0,1  
+- **Vendor ID:** GenuineIntel  
+- **Model name:** Intel(R) Xeon(R) CPU @ 2.20GHz  
+- **CPU family:** 6  
+- **Model:** 79  
+- **Thread(s) per core:** 2  
+- **Core(s) per socket:** 1  
+- **Socket(s):** 1  
+- **Stepping:** 0  
+- **BogoMIPS:** 4399.99  
+- **Flags:**  
+  fpu, vme, de, pse, tsc, msr, pae, mce, cx8, apic, sep, mtrr, pge, mca, cmov, pat, pse36, clflush, mmx, fxsr, sse, sse2, ss, ht, syscall, nx, pdpe1gb, rdtscp, lm, constant_tsc, rep_good, nopl, xtopology, nonstop_tsc, cpuid, tsc_known_freq, pni, pclmulqdq, ssse3, fma, cx16, pcid, sse4_1, sse4_2, x2apic, movbe, popcnt, aes, xsave, avx, f16c, rdrand, hypervisor, lahf_lm, abm, 3dnowprefetch, invpcid_single, ssbd, ibrs, ibpb, stibp, fsgsbase, tsc_adjust, bmi1, hle, avx2, smep, bmi2, erms, invpcid, rtm, rdseed, adx, smap, xsaveopt, arat, md_clear, arch_capabilities  
+- **Hypervisor vendor:** KVM  
+- **Virtualization type:** Full  
+- **L1d cache:** 32 KiB (1 instance)  
+- **L1i cache:** 32 KiB (1 instance)  
+- **L2 cache:** 256 KiB (1 instance)  
+- **L3 cache:** 55 MiB (1 instance)  
+- **NUMA node(s):** 1  
+- **NUMA node0 CPU(s):** 0,1  
 
-**Vulnerability Information:**
-- Gather data sampling:                 Unknown (Dependent on hypervisor status)
-- Itlb multihit:                        KVM: Mitigation: VMX unsupported
-- L1tf:                                 Not affected
-- Mds:                                  Not affected
-- Meltdown:                             Not affected
-- Mmio stale data:                      Vulnerable (Clear CPU buffers attempted, no microcode; SMT Host state unknown)
-- Reg file data sampling:               Not affected
-- Retbleed:                             Mitigation; Enhanced IBRS
-- Spec rstack overflow:                 Not affected
-- Spec store bypass:                    Mitigation; Speculative Store Bypass disabled via prctl and seccomp
-- Spectre v1:                           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
-- Spectre v2:                           Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
-- Srbds:                                Not affected
-- Tsx async abort:                      Not affected
+### **Vulnerabilities**
+- **Gather data sampling:** Not affected  
+- **Itlb multihit:** Not affected  
+- **L1tf:** Mitigation; PTE Inversion  
+- **Mds:** Vulnerable; SMT Host state unknown  
+- **Meltdown:** Vulnerable  
+- **Mmio stale data:** Vulnerable  
+- **Reg file data sampling:** Not affected  
+- **Retbleed:** Vulnerable  
+- **Spec rstack overflow:** Not affected  
+- **Spec store bypass:** Vulnerable  
+- **Spectre v1:** Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers  
+- **Spectre v2:** Vulnerable; IBPB: disabled; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable (Syscall hardening enabled)  
+- **Srbds:** Not affected  
+- **Tsx async abort:** Vulnerable  
 
-**Flags:**  
-`fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap xsaveopt arat md_clear flush_l1d arch_capabilities`
+### **GPU Information**
+No GPU detected.
 
-**GPU Information:**
-- GeForce RTX 2080 Ti
+### **Memory Information**
+| **Type** | **Total** | **Used** | **Free** | **Shared** | **Buff/Cache** | **Available** |
+|----------|-----------|----------|----------|------------|----------------|---------------|
+| Mem      | 12 GiB    | 696 MiB  | 8.9 GiB  | 1.0 MiB    | 3.1 GiB        | 11 GiB        |
+| Swap     | 0 B       | 0 B      | 0 B      |            |                |               |
 
-**Memory Information:**
-|       | Total   | Used  | Free   | Shared | Buff/Cache | Available |
-|-------|---------|-------|--------|--------|------------|-----------|
-| Mem   | 275 GiB | 8.6 GiB | 225 GiB | 2.0 MiB | 40 GiB      | 264 GiB   |
-| Swap  | 2.0 GiB | 0 B   | 2.0 GiB |        |            |           |
+### **Disk Space**
+| **Filesystem** | **Size** | **Used** | **Avail** | **Use%** | **Mounted on**        |
+|----------------|----------|----------|-----------|----------|-----------------------|
+| overlay        | 108G     | 33G      | 76G       | 31%      | /                     |
+| tmpfs          | 64M      | 0        | 64M       | 0%       | /dev                 |
+| shm            | 5.8G     | 0        | 5.8G      | 0%       | /dev/shm             |
+| /dev/root      | 2.0G     | 1.2G     | 820M      | 59%      | /usr/sbin/docker-init |
+| tmpfs          | 6.4G     | 40K      | 6.4G      | 1%       | /var/colab           |
+| /dev/sda1      | 50G      | 34G      | 17G       | 68%      | /etc/hosts           |
+| tmpfs          | 6.4G     | 0        | 6.4G      | 0%       | /proc/acpi           |
+| tmpfs          | 6.4G     | 0        | 6.4G      | 0%       | /proc/scsi           |
+| tmpfs          | 6.4G     | 0        | 6.4G      | 0%       | /sys/firmware        |
 
-**Disk Space:**
-| Filesystem                    | Size | Used | Avail | Use% | Mounted on                  |
-|--------------------------------|------|------|-------|------|-----------------------------|
-| overlay                        | 7.3T | 1.3T | 6.0T  | 18%  | /                           |
-| tmpfs                          | 64M  | 0    | 64M   | 0%   | /dev                        |
-| shm                            | 5.0G | 4.0K | 5.0G  | 1%   | /dev/shm                    |
-| /dev/mapper/srv_vg-srv_lv      | 7.3T | 1.3T | 6.0T  | 18%  | /shared_data                |
-| tmpfs                          | 138G | 0    | 138G  | 0%   | /proc/acpi                  |
-| tmpfs                          | 138G | 0    | 138G  | 0%   | /proc/scsi                  |
-| tmpfs                          | 138G | 0    | 138G  | 0%   | /sys/firmware               |
-| tmpfs                          | 138G | 0    | 138G  | 0%   | /sys/devices/virtual/powercap |
+### **Python Version**
+Python 3.10.12
 
-**Python Version:**
-- Python 3.9.7
-
-## Python Package Requirements
-To install all the packages, run:
-`pip install -r requirements.txt`
+### **Package Installation**
+To install required packages, use the following command:
+```bash
+pip install -r requirements.txt
+```
